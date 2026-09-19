@@ -1,21 +1,32 @@
-## Section 1: User Journey
+## Section 1: User Journey Funnel
 
 Page loads. User sees the logo, navigation links, and "Deploy Free Cluster" button.
+
 Action 1: User clicks "Pricing" and goes to the pricing section.
+
 Action 2: User compares the three plans and picks a plan.
+
 Action 3: User puts in the node count and log amount and email.
+
 Action 4: User clicks Generate API Keys.
+
 Terminal State: User will see a message that confirms it.
 
 ## Section 2: Norman Usability & Constraint Audit
-Signifier – Main CTA Button: Use an <a href="#register"> link so users know they can click it.
-Signifier – Most Popular Plan: Use <strong> for the “Most Popular” text to show that it is important.
-Physical/System Constraint – Node Count: Use type="number", min="1", max="500", and step="1" to limit the numbers the user can enter.
-Physical/System Constraint – Email Field: Use type="email" and required so the user must enter an email.
+
+Signifier – Main CTA Button: Use an anchor link (`<a>`) so users know they can click it.
+
+Signifier – Most Popular Plan: Use `<strong>` for the “Most Popular” text to show that it is important.
+
+Physical/System Constraint – Node Count: Use `type="number"`, `min="1"`, `max="500"`, and `step="1"` to limit the numbers the user can enter.
+
+Physical/System Constraint – Email Field: Use `type="email"` and `required` so the user must enter an email.
+
 Feedback Loop – Form and Navigation: The browser shows a message when the form is not filled correctly. Clicking a navigation link takes the user to that section.
 
-##Section 3: Semantic Component & Layout Tree
+## Section 3: Semantic Component & Layout Tree
 
+```text
 body
   header
     a<logo, links to home>
@@ -90,3 +101,4 @@ body
         a<Features>
         a<Pricing>
         a<Calculator>
+```
